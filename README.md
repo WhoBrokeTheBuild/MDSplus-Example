@@ -3,6 +3,9 @@
 
 A simple MDSplus data collection example, using a device class that generates a simple sine wave.
 
+## -1. Clone this repo
+Clone the repo and cd into the directory
+
 ## 0. Install Docker.
 
 Docker is not an important part of the job, but it was an easy way to get an example up and running to see MDSplus in action.
