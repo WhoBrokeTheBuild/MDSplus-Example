@@ -2,3 +2,5 @@
 *.datafile
 *.characteristics
 *.sys
+__pycache__
+*.pyc
