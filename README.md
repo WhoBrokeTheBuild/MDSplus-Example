@@ -3,10 +3,10 @@
 
 A simple MDSplus data collection example, using a device class that generates a simple sine wave.
 
-## -1. Clone this repo
+## 0. Clone this repo
 Clone the repo and cd into the directory
 
-## 0. Install Docker.
+## 1. Install Docker.
 
 Docker is not an important part of the job, but it was an easy way to get an example up and running to see MDSplus in action.
 
@@ -16,7 +16,7 @@ If you were interested, you could run all of the commands found in `workspace/Do
 
 I encourage you to read any and all code snippits in this repo and save your questions to ask during the interview. However, I wouldn't focus too much on the `Dockerfile` or `shell.sh`, those are just to get an environment running.
 
-## 1. Start the docker shell to use the MDSplus tools.
+## 2. Start the docker shell to use the MDSplus tools.
 
 This will build and start a docker container that will allow you to try out MDSplus without installing anything on your system.
 
@@ -26,7 +26,7 @@ The `workspace/` directory in this repo will be mounted as `/workspace/` in the 
 $ ./shell.sh
 ```
 
-## 2. Once there, you need to create the tree files.
+## 3. Once there, you need to create the tree files.
 
 *Note:* Running this again will delete the existing tree and all modifications to it.
 
@@ -36,7 +36,7 @@ This will add a SineWave device to the tree, which will generate our data to pla
 root@abcd1234:/workspace# ./build-tree.sh
 ```
 
-## 3. Run a "shot" to collect some data.
+## 4. Run a "shot" to collect some data.
 
 A "shot" is how we refer to a single data capture. Each shot gets a number to refer to it. The special number -1 refers to the "model shot", which is the template used when creating new shots. The special number 0 refers to the "current shot".
 
@@ -48,7 +48,7 @@ Shot files will be located in `/workspace/trees/` and can be accessed using the 
 root@abcd1234:/workspace# ./run-shot.sh
 ```
 
-## 4. Analyze the data.
+## 5. Analyze the data.
 
 This can be done using any of the MDSplus tools, here are some examples:
 
@@ -65,7 +65,7 @@ With the MDsplus python API and matplotlib, you can easily work with and view th
 root@abcd1234:/workspace# python3 plot.py
 ```
 
-## 5. Experiment!
+## 6. Experiment!
 
 Edit the values `FREQUENCY`, `AMPLITUDE`, `LENGTH` and `SAMPLE_RATE`, then run a new shot and see the effects on the data.
 
