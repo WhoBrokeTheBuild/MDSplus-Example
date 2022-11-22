@@ -39,6 +39,8 @@ Once you have MDSplus installed, navigate to the `workspace/` folder within this
 
 ```
 $ source env.sh
+$ python3 --version
+Python 3.8.10
 $ export PyLib=python3.8
 ```
 
