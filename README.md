@@ -9,7 +9,7 @@ Clone the repo and change into the directory.
 
 ## 1. Install MDSplus
 
-### Using Docker (Recommended)
+### Option A: Using Docker (Recommended)
 
 Docker is not an important part of the job, but it was an easy way to get an example up and running to see MDSplus in action.
 
@@ -29,7 +29,7 @@ The `workspace/` directory in this repo will be mounted as `/workspace/` in the 
 
 *Note:* Tree files created from docker will be owned by root.
 
-### Using a standard installation
+### Option B: Using a standard installation
 
 If you want to run MDSplus the standard way, you will need to install it on your system. You can find the instructions here: https://mdsplus.org/index.php/Downloads
 *Note:* This example is not compatible with Windows, if you have a Windows system I recommend making a Linux Virtual Machine.
