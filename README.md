@@ -3,9 +3,21 @@
 
 A simple MDSplus data collection example, using a device class that generates a simple sine wave.
 
+## 0. Install Docker.
+
+Docker is not an important part of the job, but it was an easy way to get an example up and running to see MDSplus in action.
+
+Step #1 must be run on a linux system with docker installed. If you don't have a linux system, I recommend creating a virtual machine. If you don't have docker installed, you can follow these instructions: https://docs.docker.com/engine/install/
+
+If you were interested, you could run all of the commands found in `workspace/Dockerfile` on an Ubuntu 20.04 system, and you would get a working MDSplus installation.
+
+I encourage you to read any and all code snippits in this repo and save your questions to ask during the interview. However, I wouldn't focus too much on the `Dockerfile` or `shell.sh`, those are just to get an environment running.
+
 ## 1. Start the docker shell to use the MDSplus tools.
 
-This will mount the `workspace/` directory as `/workspace/`, and all scripts and data will live in that directory.
+This will build and start a docker container that will allow you to try out MDSplus without installing anything on your system.
+
+The `workspace/` directory in this repo will be mounted as `/workspace/` in the container, and all scripts and data will be accessible in both your host system and the container.
 
 ```
 $ ./shell.sh
@@ -45,7 +57,7 @@ root@abcd1234:/workspace# jScope -def scopes/test.jscp &
 ```
 
 **matplotlib**
-With the MDsplus python API and matplotlib, you can easily work with and view the datra.
+With the MDsplus python API and matplotlib, you can easily work with and view the data.
 ```
 root@abcd1234:/workspace# python3 plot.py
 ```
@@ -62,4 +74,4 @@ tree as a proper hierarchy, and view/modify values. You can use this to edit the
 root@abcd1234:/workspace# jTraverser test -1 &
 ```
 
-Once you've editied a value in the model, go back to Step #3 and collect more data.
+Once you've edited a value in the model, go back to Step #3 and collect more data.
